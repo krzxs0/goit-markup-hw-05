@@ -16,6 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="node_modules/modern-normalize/modern-normalize.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -27,24 +31,24 @@
             ><span class="web-logo-style">Web</span>Studio</a
           >
           <ul class="list-style-none header-list">
-            <li>
+            <li class="tabs-web-studio current">
               <a
-                href=""
-                class="tabs-web-studio list-style-none text-decoration box-header-text links"
+                href="./index.html"
+                class="list-style-none text-decoration box-header-text links studio-link nav-links"
                 >Studio</a
               >
             </li>
-            <li class="box-header-text">
+            <li class="box-header-text tabs-web-studio">
               <a
                 href="./portfolio.html"
-                class="tabs-web-studio list-style-none text-decoration box-header-text links"
+                class="list-style-none text-decoration box-header-text links portfolio-link nav-links"
                 >Portfolio</a
               >
             </li>
-            <li>
+            <li class="tabs-web-studio">
               <a
                 href=""
-                class="tabs-web-studio list-style-none text-decoration box-header-text links"
+                class="list-style-none text-decoration box-header-text links nav-links"
                 >Contacts</a
               >
             </li>
@@ -82,9 +86,22 @@
             <button
               type="button"
               class="button-hero-h button-text-after-title cursor-pointer"
+              data-modal-open
             >
               Order Service
             </button>
+            <div class="backdrop is-hidden" data-modal>
+              <div class="modal">
+                <button class="button-close-modal" data-modal-close>
+                  <svg class="modal-svg" width="8px" height="8px">
+                    <use
+                      href="./images/spryte-modal.svg#icon-close-black"
+                    ></use>
+                  </svg>
+                </button>
+                <p></p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -477,5 +494,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
